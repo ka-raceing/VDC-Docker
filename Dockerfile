@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:focal
 
 # avoid config interfaces
 ARG DEBIAN_FRONTEND=noninteractive
