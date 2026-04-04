@@ -78,7 +78,7 @@ jobs:
           # platforms: linux/amd64,linux/arm64
           context: .
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}, ghcr.io/ka-raceing/ros-docker:latest
+          tags: ${{ steps.meta.outputs.tags }}, ghcr.io/ka-raceing/vdc-docker:latest
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
