@@ -8,9 +8,13 @@ ENV ROS_DISTRO=jazzy
 # Install additional development tools, check if further tools are needed
 RUN apt-get update && apt-get install -y \
     python3-pip \
+    python3-setuptools \
     python3-colcon-common-extensions \
     python3-rosdep \
     python3-vcstool \
+    python3-pytest \
+    python3-pytest-cov \
+    python3-flake8 \
     git \
     vim \
     nano \
@@ -23,13 +27,6 @@ RUN apt-get update && apt-get install -y \
     clang-tidy \
     cppcheck \
     && rm -rf /var/lib/apt/lists/*
-
-# Install additional Python packages
-RUN pip3 install \
-    setuptools \
-    pytest \
-    pytest-cov \
-    flake8
 
 # Initialize rosdep
 RUN rosdep update
