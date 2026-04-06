@@ -1,9 +1,9 @@
-# Use ROS2 Humble as base image
-FROM osrf/ros:humble-desktop-full
+# Use ROS2 Jazzy as base image
+FROM osrf/ros:jazzy-desktop-full
 
 # Set environment variables
 ENV DEBIAN_FRONTEND=noninteractive
-ENV ROS_DISTRO=humble
+ENV ROS_DISTRO=jazzy
 
 # Install additional development tools, check if further tools are needed
 RUN apt-get update && apt-get install -y \
