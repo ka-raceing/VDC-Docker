@@ -28,6 +28,9 @@ RUN apt-get update && apt-get install -y \
     cppcheck \
     && rm -rf /var/lib/apt/lists/*
 
+RUN apt update && apt install -y \
+    ros-$ROS_DISTRO-foxglove-bridge
+
 # Initialize rosdep
 RUN rosdep update
 
