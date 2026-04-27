@@ -4,6 +4,7 @@ FROM osrf/ros:jazzy-desktop-full
 # Set environment variables
 ENV DEBIAN_FRONTEND=noninteractive
 ENV ROS_DISTRO=jazzy
+ENV ROS_DOMAIN_ID=11
 
 # Install additional development tools, check if further tools are needed
 RUN apt-get update && apt-get install -y \
